@@ -61,7 +61,7 @@ If you've not the time/knowledge to package yourself the image, you could **[dow
 ### Creating the image 
 
 ```shell
-git clone https://github.com/amanharitsh123/sugarizer-school-box.git
+git clone https://github.com/llaske/sugarizer-school-box.git
 cd sugarizer-school-box
 sudo sh run.sh
 ```
@@ -76,14 +76,14 @@ The resulting of the script should be a file named:
 
 `xxxx-xx-xx-arm64-rpi-4.11.y-rpi3-stretch-arm64.img`
 
-located into `images/stretch` directory.
+located into `build/images/stretch` directory.
 
 Once the image is generated you could flash it on a SD card that you will insert directly into your Raspberry PI.
 
 To do that, on Debian just launch:
 
 ```shell
-bmaptool copy ./images/stretch/*.img /dev/mmcblk0
+bmaptool copy ./build/images/stretch/*.img /dev/mmcblk0
 ```
 
 Note: You have to find your sdcard's mount point and replace it with "mmcblk0" while flashing.

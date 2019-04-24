@@ -1,6 +1,7 @@
 #Cloning all Required Repositories
 git clone https://github.com/llaske/sugarizer ${R}/home/pi/sugarizer
-git clone https://github.com/llaske/sugarizer-server ${R}/home/pi/sugarizer-server
+sed -i "s/\"electron\": \"^2.0.0\",//g" ${R}/home/pi/sugarizer/package.json
+git clone -b dev https://github.com/llaske/sugarizer-server ${R}/home/pi/sugarizer-server
 git clone https://github.com/amanharitsh123/RPI3_HOTSPOTS ${R}/home/pi/RPI3_HOTSPOTS
 
 #Copying Docker Images
@@ -15,7 +16,7 @@ cp ../image_scripts/rc.local ${ETC_DIR}/
 #Optimizing Sugarizer
 cd ${R}/home/pi/sugarizer
 npm install
-grunt
+grunt -v
 cp -r build/* .
 
 #Changing Hostname

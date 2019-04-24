@@ -26,8 +26,8 @@ git clone https://github.com/drtyhlpr/rpi23-gen-image.git build/
 if [ ! -d "docker-images" ]; then
  mkdir docker-images
  cd docker-images
- wget -O mongodb.docker http://people.sugarlabs.org/asharma/mongodb.docker
- wget -O node.docker http://people.sugarlabs.org/asharma/node.docker
+ wget -O mongodb.docker http://sugarizer.org/download/mikkl_multiarch-mongodb_armhf.docker
+ wget -O node.docker http://sugarizer.org/download/llaske_multiarch-node6_armhf.docker
  cd ..
 fi
 
