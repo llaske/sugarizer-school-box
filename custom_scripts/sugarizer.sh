@@ -1,7 +1,7 @@
 #Cloning all Required Repositories
 git clone https://github.com/llaske/sugarizer ${R}/home/pi/sugarizer
 sed -i "s/\"electron\": \"^2.0.0\",//g" ${R}/home/pi/sugarizer/package.json
-git clone -b dev https://github.com/llaske/sugarizer-server ${R}/home/pi/sugarizer-server
+git clone https://github.com/llaske/sugarizer-server ${R}/home/pi/sugarizer-server
 git clone https://github.com/amanharitsh123/RPI3_HOTSPOTS ${R}/home/pi/RPI3_HOTSPOTS
 
 #Copying Docker Images
@@ -22,4 +22,3 @@ cp -r build/* .
 #Changing Hostname
 echo "SugarizerSchoolBox" > ${ETC_DIR}/hostname
 sed -i "s/rpi3-stretch/SugarizerSchoolBox/g" ${ETC_DIR}/hosts
-
